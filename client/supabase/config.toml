@@ -1,0 +1,29 @@
+# One DSD Equity Platform - Supabase Configuration
+# This file configures the Supabase project for local development and deployment
+# See: https://supabase.com/docs/guides/cli/config
+
+[project]
+id = "pmwqakhmcudwokupzsfj"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public"]
+
+[auth]
+enabled = true
+site_url = "http://localhost:5173"
+additional_redirect_urls = [
+  "https://equity-layout-shell.lovable.app",
+  "https://*.azurestaticapps.net"
+]
+
+[auth.external.azure]
+enabled = true
+client_id = "env(AZURE_CLIENT_ID)"
+secret = "env(AZURE_CLIENT_SECRET)"
+url = "https://login.microsoftonline.com/env(AZURE_TENANT_ID)"
+
+[storage]
+enabled = true
+file_size_limit = "50MiB"
