@@ -34,6 +34,7 @@ import KnowledgeBasePage from "@/pages/KnowledgeBasePage";
 import WorkflowsPage from "@/pages/WorkflowsPage";
 import TemplatesPage from "@/pages/TemplatesPage";
 import EquityAssistPage from "@/pages/EquityAssistPage";
+import LearningPage from "@/pages/LearningPage";
 
 interface NavItem {
   label: string;
@@ -52,6 +53,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: "Workflows", path: "/workflows", group: "Processes", shortLabel: "Runs" },
   { label: "Templates", path: "/templates", group: "Processes", shortLabel: "Templates" },
   { label: "Communities", path: "/community", group: "Community", shortLabel: "Communities" },
+  { label: "Learning Home", path: "/learning", group: "Learning", shortLabel: "Learning" },
   { label: "Training", path: "/training", group: "Learning", shortLabel: "Training" },
   { label: "Goals", path: "/goals", group: "Learning", shortLabel: "Goals" },
   { label: "Checklist", path: "/checklist", group: "Learning", shortLabel: "Checklist" },
@@ -411,6 +413,7 @@ function AppShell() {
               <Route path="/metrics" element={<EquityMetricsPage />} />
               <Route path="/community" element={<CommunityPage />} />
               <Route path="/training" element={<TrainingPage />} />
+              <Route path="/learning" element={<LearningPage />} />
               <Route path="/goals" element={<GoalsPage />} />
               <Route path="/policy" element={<PolicyPage />} />
               <Route path="/knowledge" element={<KnowledgeBasePage />} />
